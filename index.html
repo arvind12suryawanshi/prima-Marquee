@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee Text</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+
+        .marquee-container {
+            width: 100%;
+           
+            
+            padding: 10px 0; /* Vertical padding */
+        }
+
+        .marquee-content {
+         
+            font-size: 1.5rem;
+            color: #000; /* Default text color */
+            animation: marquee 10s linear infinite; /* Animation */
+        }
+
+        .marquee-content span.prima {
+            color: rgb(236, 115, 135); /* Dark blue color for 'Prima' */
+        }
+
+        .marquee-content span.think {
+            color: black; /* Black color for 'Think' */
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span class="prima">Prima</span> <span class="think">Think</span>
+            <span class="prima">Prima</span> <span class="think">Think</span> <!-- Duplicate text for seamless looping -->
+        </div>
+    </div>
+
+</body>
+</html>
